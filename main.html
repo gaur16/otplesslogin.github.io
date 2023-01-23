@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WhatsApp Redirect</title>
+  </head>
+  <body>
+
+    <button id="send-message-button">Send Message</button>
+
+    <script>
+      // Get the button element
+      var button = document.getElementById("send-message-button");
+
+      // Add a click event listener to the button
+      button.addEventListener("click", function() {
+        // The phone number you want to send the message to
+        var phoneNumber = "1234567890";
+        //The message to be sent
+        var message = "Hello! This is a test message";
+        // Redirect the user to WhatsApp with the phone number and message pre-filled
+        window.location.href = "https://api.whatsapp.com/send?phone=" + phoneNumber +"&text="+ message;
+      });
+    </script>
+  </body>
+</html>
+
